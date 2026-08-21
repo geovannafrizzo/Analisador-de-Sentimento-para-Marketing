@@ -13,17 +13,21 @@ Duas versões do analisador:
 | Versão | Como funciona | Requer API? |
 |---|---|---|
 | `analisador_simples.py` | Classificação por palavras-chave | ❌ Não |
-| `analisador_ia.py` | Classificação via IA (Claude), entende contexto e ironia | ✅ Sim |
+| `analisador_ia.py` | Classificação via IA (Claude), entende contexto e ironia | ✅ Sim (paga) |
 
 ## 🛠️ Como usar
 
-### Versão simples (sem API)
+### Versão simples (recomendada para começar)
+
+Roda direto, sem instalar nada além do Python:
 
 ```bash
 python analisador_simples.py
 ```
 
-### Versão com IA
+### Versão com IA (opcional)
+
+Essa versão usa a API da Anthropic, que é **paga por uso** (não tem plano gratuito) — é preciso criar uma conta em [platform.claude.com](https://platform.claude.com), cadastrar um cartão e gerar uma chave de API antes de rodar:
 
 ```bash
 pip install -r requirements.txt
@@ -58,6 +62,7 @@ Neutro: 3 (20.0%)
 
 ## 🔮 Próximos passos
 
+- [ ] Testar a versão com IA (`analisador_ia.py`) com uma conta de API
 - [ ] Adicionar suporte para importar comentários direto do Instagram/Twitter via API
 - [ ] Gerar gráfico de distribuição de sentimento
 - [ ] Exportar resultados para um relatório em PDF
